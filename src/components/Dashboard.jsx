@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from './Card';
+import { mockCompanyDetails } from '../constants/mock';
+import Header from './Header';
 
 const Dashboard = () => {
     return (
@@ -8,8 +10,8 @@ const Dashboard = () => {
             grid-cols-1 md:grid-cols-2 xl:grid-cols-3 
             grid-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr'
         >
-            <div className='col-span-1 md:col-span-2 xl:col-span-3 row-span-1'>
-                <Card title="Header"/>
+            <div className='flex justify-start items-center col-span-1 md:col-span-2 xl:col-span-3 row-span-1'>
+                <Header name={mockCompanyDetails.name}></Header>
             </div>
             <div className='col-span-1 md:col-span-2 xl:col-span-2 row-span-4'>
                 <Card title="Chart" />
